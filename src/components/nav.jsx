@@ -16,7 +16,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex space-x-8 items-center text-blue-900">
-          <a href="/about" className="hover:text-pink-500 transition-colors">
+          <a href="/about" className="hover:text-pink-500 transition-colors" >
             About
           </a>
           <a href="/services" className="hover:text-pink-500 transition-colors">
