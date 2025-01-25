@@ -1,44 +1,60 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="bg-white shadow-md">
+    <nav
+      className={`sticky top-0 z-50 bg-white ${
+        isScrolled ? "shadow-md" : ""
+      } transition-shadow duration-300`}
+    >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center">
           <span className="ml-3 text-xl font-bold text-blue-900">HackFusion</span>
         </div>
 
+        {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 items-center text-blue-900">
-          <a href="/about" className="hover:text-pink-500 transition-colors" >
+          <Link href="/about" className="hover:underline hover:decoration-pink-500 hover:decoration-2 transition-all">
             About
-          </a>
-          <a href="/services" className="hover:text-pink-500 transition-colors">
+          </Link>
+          <Link href="/services" className="hover:underline hover:decoration-pink-500 hover:decoration-2 transition-all">
             Our Services
-          </a>
-          <a href="/portfolio" className="hover:text-pink-500 transition-colors">
+          </Link>
+          <Link href="/portfolio" className="hover:underline hover:decoration-pink-500 hover:decoration-2 transition-all">
             Portfolio
-          </a>
-          <a href="/blog" className="hover:text-pink-500 transition-colors">
+          </Link>
+          <Link href="/blog" className="hover:underline hover:decoration-pink-500 hover:decoration-2 transition-all">
             Blog
-          </a>
-          <a href="/contact" className="hover:text-pink-500 transition-colors">
+          </Link>
+          <Link href="/contact" className="hover:underline hover:decoration-pink-500 hover:decoration-2 transition-all">
             Contact
-          </a>
-          <a
+          </Link>
+          <Link
             href="/get-in-touch"
             className="bg-pink-500 text-white px-5 py-2 rounded-md shadow-lg hover:bg-pink-600 transition-all duration-200"
           >
             Get In Touch
-          </a>
+          </Link>
         </div>
 
+        {/* Mobile Menu Button */}
         <button
           className="md:hidden focus:outline-none"
           onClick={toggleMenu}
@@ -60,32 +76,33 @@ const Navbar = () => {
           </svg>
         </button>
 
+        {/* Mobile Menu */}
         <div
           className={`md:hidden fixed top-0 left-0 right-0 bottom-0 bg-white z-50 flex flex-col items-center justify-center space-y-6 text-blue-900 transition-transform duration-300 ease-in-out ${
             showMenu ? "transform translate-y-0" : "transform -translate-y-full"
           }`}
         >
-          <a href="/about" className="text-lg font-medium hover:text-pink-500">
+          <Link href="/about" className="text-lg font-medium hover:underline hover:decoration-pink-500 hover:decoration-2">
             About
-          </a>
-          <a href="/services" className="text-lg font-medium hover:text-pink-500">
+          </Link>
+          <Link href="/services" className="text-lg font-medium hover:underline hover:decoration-pink-500 hover:decoration-2">
             Our Services
-          </a>
-          <a href="/portfolio" className="text-lg font-medium hover:text-pink-500">
+          </Link>
+          <Link href="/portfolio" className="text-lg font-medium hover:underline hover:decoration-pink-500 hover:decoration-2">
             Portfolio
-          </a>
-          <a href="/blog" className="text-lg font-medium hover:text-pink-500">
+          </Link>
+          <Link href="/blog" className="text-lg font-medium hover:underline hover:decoration-pink-500 hover:decoration-2">
             Blog
-          </a>
-          <a href="/contact" className="text-lg font-medium hover:text-pink-500">
+          </Link>
+          <Link href="/contact" className="text-lg font-medium hover:underline hover:decoration-pink-500 hover:decoration-2">
             Contact
-          </a>
-          <a
+          </Link>
+          <Link
             href="/get-in-touch"
             className="bg-pink-500 text-white px-6 py-3 rounded-md shadow-lg font-medium hover:bg-pink-600 transition-all duration-300"
           >
             Get In Touch
-          </a>
+          </Link>
           <button
             onClick={toggleMenu}
             className="absolute top-6 right-6 text-blue-900 hover:text-gray-500"

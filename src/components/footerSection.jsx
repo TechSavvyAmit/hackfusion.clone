@@ -7,10 +7,8 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-6">
         <div>
           <div className="flex items-center space-x-2 mb-4">
-            <div className="bg-red-500 p-2 rounded-full">
-              <span className="text-white font-bold text-lg">⚡</span>
-            </div>
-            <span className="text-lg font-semibold">Logoipsum</span>
+            
+            <span className="text-lg font-semibold">Hackfusion</span>
           </div>
           <p className="text-sm text-gray-400">
             It is a long established fact that a reader will be distracted by
