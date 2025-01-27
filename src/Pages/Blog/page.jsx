@@ -1,7 +1,7 @@
 "use client";
 import Head from "next/head";
 import Navbar from "@/components/nav";
-import BlogHero from "@/components/Herosection/blog";
+import BlogHero from "@/components/herosection/blog";
 
 
 export default function BlogPage() {

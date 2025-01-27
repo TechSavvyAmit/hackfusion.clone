@@ -1,9 +1,9 @@
 "use client";
 import Head from "next/head";
 import Navbar from "@/components/nav";
-import ServicesHero from "@/components/Herosection/services";
-import WhatWeDo from "@/components/LandingPage/landingWhatWeDoSection";
-import OurExpertise from "@/components/LandingPage/landingOurExperticeSection";
+import ServicesHero from "@/components/herosection/services";
+import WhatWeDo from "@/components/landingPage/landingWhatWeDoSection";
+import OurExpertise from "@/components/landingPage/landingOurExperticeSection";
 import FooterCover from "@/components/footerCover";
 import Footer from "@/components/footerSection";
 
