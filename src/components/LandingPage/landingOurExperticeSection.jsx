@@ -9,7 +9,7 @@ const OurExpertise = () => {
         "We create responsive and visually appealing websites that enhance user experience and drive engagement.",
       icon: (
         <svg
-          className="w-10 h-10 text-red-500"
+          className="w-14 h-14 text-red-500 hover:text-red-700 hover:scale-110 transition duration-300"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -30,7 +30,7 @@ const OurExpertise = () => {
         "Our UI/UX design services focus on creating intuitive interfaces that provide a seamless user experience.",
       icon: (
         <svg
-          className="w-10 h-10 text-red-500"
+          className="w-14 h-14 text-red-500 hover:text-red-700 hover:scale-110 transition duration-300"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -51,7 +51,7 @@ const OurExpertise = () => {
         "We offer seamless website migration services to ensure your site is transferred without any downtime.",
       icon: (
         <svg
-          className="w-10 h-10 text-red-500"
+          className="w-14 h-14 text-red-500 hover:text-red-700 hover:scale-110 transition duration-300"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -72,7 +72,7 @@ const OurExpertise = () => {
         "Our team specializes in developing mobile applications that are user-friendly and feature-rich.",
       icon: (
         <svg
-          className="w-10 h-10 text-red-500"
+          className="w-14 h-14 text-red-500 hover:text-red-700 hover:scale-110 transition duration-300"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -93,11 +93,10 @@ const OurExpertise = () => {
         "We provide HubSpot integration services to help you streamline your marketing and sales processes.",
       icon: (
         <svg
-          className="w-10 h-10 text-red-500"
+          className="w-14 h-14 text-red-500 hover:text-red-700 hover:scale-110 transition duration-300"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             strokeLinecap="round"
@@ -114,7 +113,7 @@ const OurExpertise = () => {
         "Our email marketing services help you reach your audience effectively and drive conversions.",
       icon: (
         <svg
-          className="w-10 h-10 text-red-500"
+          className="w-14 h-14 text-red-500 hover:text-red-700 hover:scale-110 transition duration-300"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -132,11 +131,13 @@ const OurExpertise = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
-          <h3 className="text-red-500 font-semibold text-lg mb-2">\ Services \</h3>
-          <h2 className="text-3xl font-bold text-gray-800">
+          <h3 className="text-red-500 font-semibold text-lg mb-2 font-raleway">
+            \ Services \
+          </h3>
+          <h2 className="text-3xl font-bold text-gray-800 font-raleway">
             Our Expertise
           </h2>
         </div>
@@ -145,16 +146,24 @@ const OurExpertise = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md p-6 text-center"
+              className="bg-gray-100 rounded-lg shadow-md p-8 text-left relative group"
             >
-              <div className="flex items-center justify-center mb-4">
+              <div className="absolute top-6 left-6 bg-white p-1.5 rounded-sm">
                 {service.icon}
               </div>
-              <h3 className="text-lg font-bold text-gray-800 mb-2">
-                {service.title}
-              </h3>
-              <div className="w-12 h-1 bg-red-500 mx-auto mb-4"></div>
-              <p className="text-sm text-gray-600">{service.description}</p>
+
+              {/* Title and Span Wrapper */}
+              <div className="mb-8">
+                <h3 className="text-lg font-bold text-gray-800 mb-4 mt-16  font-raleway">
+                  {service.title}
+                </h3>
+                <span className="block w-20 h-1 bg-red-500 mt-1 transition-all duration-300 group-hover:w-40"></span>
+              </div>
+
+              {/* Description */}
+              <p className="text-sm text-gray-600 font-raleway font-medium text-[16px] leading-[26px]">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>
