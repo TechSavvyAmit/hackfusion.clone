@@ -1,9 +1,9 @@
 "use client";
 import Head from "next/head";
 import Navbar from "@/components/nav";
-import AboutHero from "@/components/herosection/about";
-import AboutUsSection from "@/components/landingPage/landingAboutusSection";
-import OurLeaders from "@/components/landingPage/landingOurLeaders";
+import About from "@/components/Herosection/About";
+import AboutUsSection from "@/components/LandingPage/landingAboutusSection";
+import OurLeaders from "@/components/LandingPage/landingOurLeaders";
 import FooterCover from "@/components/footerCover";
 import Footer from "@/components/footerSection";
 
@@ -20,7 +20,7 @@ export default function AboutPage() {
       </Head>
       <div>
         <Navbar />
-        <AboutHero />
+        <About />
         <AboutUsSection />
         <OurLeaders />
         <FooterCover />

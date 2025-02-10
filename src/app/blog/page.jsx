@@ -1,7 +1,7 @@
 "use client";
 import Head from "next/head";
 import Navbar from "@/components/nav";
-import BlogHero from "@/components/herosection/blog";
+import BlogHero from "@/components/Herosection/blog";
 import BlogSection from "@/components/landingPage/landingBlogSection";
 import FooterCover from "@/components/footerCover";
 import Footer from "@/components/footerSection";
@@ -20,7 +20,7 @@ export default function BlogPage() {
       <div>
         <Navbar />
         <BlogHero />
-        <BlogSection/>
+        <BlogSection />
         <FooterCover />
         <Footer />
       </div>
