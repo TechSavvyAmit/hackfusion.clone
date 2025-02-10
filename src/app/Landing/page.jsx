@@ -1,15 +1,15 @@
 "use client";
 import Head from "next/head";
 import Navbar from "@/components/nav";
-import HeroSection from "@/components/landingPage/landingHeroSection";
-import AboutUsSection from "@/components/landingPage/landingAboutusSection";
-import OurProcess from "@/components/landingPage/landingOurprocessSection";
-import WhatWeDo from "@/components/landingPage/landingWhatWeDoSection";
-import OurExpertise from "@/components/landingPage/landingOurExperticeSection";
-import OurLeaders from "@/components/landingPage/landingOurLeaders";
-import Testimonials from "@/components/landingPage/landingTestimonialsSection";
+import HeroSection from "@/components/LandingPage/landingHeroSection";
+import AboutUsSection from "@/components/LandingPage/landingAboutusSection";
+import OurProcess from "@/components/LandingPage/landingOurprocessSection";
+import WhatWeDo from "@/components/LandingPage/landingWhatWeDoSection";
+import OurExpertise from "@/components/LandingPage/landingOurExperticeSection";
+import OurLeaders from "@/components/LandingPage/landingOurLeaders";
+import Testimonials from "@/components/LandingPage/landingTestimonialsSection";
 import ContactUs from "@/components/getintouchsection";
-import BlogSection from "@/components/landingPage/landingBlogSection";
+import BlogSection from "@/components/LandingPage/landingBlogSection";
 import FooterCover from "@/components/footerCover";
 import Footer from "@/components/footerSection";
 
