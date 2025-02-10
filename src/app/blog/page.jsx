@@ -2,7 +2,7 @@
 import Head from "next/head";
 import Navbar from "@/components/nav";
 import BlogHero from "@/components/Herosection/blog";
-import BlogSection from "@/components/landingPage/landingBlogSection";
+import BlogSection from "@/components/LandingPage/landingBlogSection";
 import FooterCover from "@/components/footerCover";
 import Footer from "@/components/footerSection";
 

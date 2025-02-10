@@ -1,6 +1,6 @@
 "use client";
 import Head from "next/head";
-import Portfolio from "@/components/herosection/portfolio";
+import Portfolio from "@/components/Herosection/portfolio";
 import Navbar from "@/components/nav";
 import PortfolioSection from "@/components/LandingPage/landingOurPortofolio";
 import FooterCover from "@/components/footerCover";
@@ -21,7 +21,7 @@ export default function PortfolioPage() {
       <div>
         <Navbar />
         <Portfolio />
-        <PortfolioSection/>
+        <PortfolioSection />
         <FooterCover />
         <Footer />
       </div>

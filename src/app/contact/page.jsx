@@ -1,7 +1,7 @@
 "use client";
 import Head from "next/head";
 import Navbar from "@/components/nav";
-import ContactHero from "@/components/herosection/contact";
+import ContactHero from "@/components/Herosection/contact";
 import ContactUs from "@/components/getintouchsection";
 import FooterCover from "@/components/footerCover";
 import Footer from "@/components/footerSection";
