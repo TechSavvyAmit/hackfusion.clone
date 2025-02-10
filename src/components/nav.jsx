@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -25,12 +26,23 @@ const Navbar = () => {
       } transition-shadow duration-300`}
     >
       <div className="max-w-7xl mx-auto ">
-        {" "}
-        {/* Wrap the nav content inside this */}
         <div className="py-4 flex justify-between items-center">
           <div className="flex items-center">
-            <Link href="/" className="ml-3 text-xl font-bold text-blue-900">
-              HackFusion
+            <Link href="/" className="ml-3 flex items-center space-x-2">
+              <div className="py-2 w-16 h-12 overflow-hidden">
+                {" "}
+                {/* Increased size */}
+                <Image
+                  src="/logo.png"
+                  alt="HackFusion Logo"
+                  width={120} // Increased width
+                  height={140} // Increased height
+                  className="object-cover"
+                />
+              </div>
+              <span className="text-xl font-bold text-blue-900">
+                HackFusion
+              </span>
             </Link>
           </div>
 

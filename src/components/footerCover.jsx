@@ -3,7 +3,7 @@ import React from "react";
 
 const FooterCover = () => {
   return (
-    <section className="relative bg-cover bg-center py-16">
+    <section className="relative bg-cover bg-center py-[100px]">
       <div className="relative text-center text-white px-8 py-16 rounded-xl max-w-4xl mx-auto overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"

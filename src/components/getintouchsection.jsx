@@ -1,16 +1,29 @@
 "use client";
 import React from "react";
+import { usePathname } from "next/navigation";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "tailwindcss/tailwind.css"; // Ensure Tailwind is imported
+import "tailwindcss/tailwind.css";
 
 const ContactUs = () => {
+  const pathname = usePathname();
+
   return (
-    <section className="bg-[#0A1D56] py-16 text-white font-raleway">
+    <section
+      className={`${
+        pathname === "/contact" ? "bg-red-50" : "bg-[#0A1D56]"
+      } py-[100px] text-white font-raleway`}
+    >
       <div className="text-center mb-10">
         <h3 className="text-red-500 font-semibold text-lg mb-2">
           \ Get In Touch \
         </h3>
-        <h2 className="text-4xl font-bold">Hey! Let's Talk</h2>
+        <h2
+          className={`text-4xl font-bold ${
+            pathname === "/contact" ? "text-[#0E1F51]" : "text-white"
+          }`}
+        >
+          Hey! Let's Talk
+        </h2>
       </div>
 
       <div className="max-w-7xl mx-auto px-6">
@@ -50,10 +63,11 @@ const ContactUs = () => {
           {/* Contact Details */}
           <div className="bg-white text-gray-800 rounded-xl shadow-lg p-8">
             <div className="space-y-6">
-              {/* Phone */}
               <div className="flex items-start gap-4">
-                <div className="text-red-500 text-2xl">
-                  <i className="fas fa-phone-alt"></i>
+                <div className="mt-2">
+                  <div className="text-red-500 text-2xl bg-gray-100 p-3 rounded-sm transition-transform transform hover:scale-105 hover:text-red-600">
+                    <i className="fas fa-phone-alt"></i>
+                  </div>
                 </div>
                 <div>
                   <h4 className="font-bold text-lg text-red-500">
@@ -64,10 +78,12 @@ const ContactUs = () => {
                 </div>
               </div>
 
-              {/* Email */}
               <div className="flex items-start gap-4">
-                <div className="text-red-500 text-2xl">
-                  <i className="fas fa-envelope"></i>
+                <div className="mt-2">
+                  {" "}
+                  <div className="text-red-500 text-2xl bg-gray-100 p-3 rounded-sm transition-transform transform hover:scale-105 hover:text-red-600">
+                    <i className="fas fa-envelope"></i>
+                  </div>
                 </div>
                 <div>
                   <h4 className="font-bold text-lg text-red-500">
@@ -78,10 +94,11 @@ const ContactUs = () => {
                 </div>
               </div>
 
-              {/* Address */}
               <div className="flex items-start gap-4">
-                <div className="text-red-500 text-2xl">
-                  <i className="fas fa-map-marker-alt"></i>
+                <div className="mt-2">
+                  <div className="text-red-500 text-2xl bg-gray-100 p-3 pl-4 pr-4 rounded-sm transition-transform transform hover:scale-105 hover:text-red-600">
+                    <i className="fas fa-map-marker-alt"></i>
+                  </div>
                 </div>
                 <div>
                   <h4 className="font-bold text-lg text-red-500">Visit Us:</h4>
@@ -94,7 +111,6 @@ const ContactUs = () => {
               </div>
             </div>
 
-            {/* Social Links */}
             <div className="mt-8 text-center">
               <h4 className="font-bold text-lg mb-4">Follow us</h4>
               <div className="flex justify-center gap-4">

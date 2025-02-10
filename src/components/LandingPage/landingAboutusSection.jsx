@@ -3,7 +3,7 @@ import React from "react";
 
 const AboutUsSection = () => {
   return (
-    <div className="relative bg-gray-50 py-16 px-6 sm:px-8 lg:px-20 font-raleway">
+    <div className="relative bg-gray-50 py-[100px] px-6 sm:px-8 lg:px-20 font-raleway">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-stretch gap-12">
         {/* Image Section */}
         <div className="relative flex items-stretch">
@@ -29,20 +29,11 @@ const AboutUsSection = () => {
           </p>
           <div className="mt-6 bg-white p-3 rounded-lg shadow-lg flex items-center gap-4">
             <div className="bg-gray-100 p-2 rounded-md">
-              <svg
-                className="w-12 h-12 text-red-500"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
+              <img
+                src="/icons/aboutus.svg"
+                alt="Reaserch Icon"
+                className="w-14 h-14 text-red-500 hover:scale-110 transition duration-300"
+              />
             </div>
             <div>
               <h3 className="text-lg font-medium text-gray-900">
