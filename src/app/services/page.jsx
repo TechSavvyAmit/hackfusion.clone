@@ -2,8 +2,8 @@
 import Head from "next/head";
 import Navbar from "@/components/nav";
 import ServicesHero from "@/components/Herosection/services";
-import WhatWeDo from "@/components/landingPage/landingWhatWeDoSection";
-import OurExpertise from "@/components/landingPage/landingOurExperticeSection";
+import WhatWeDo from "@/components/LandingPage/landingWhatWeDoSection";
+import OurExpertise from "@/components/LandingPage/landingOurExperticeSection";
 import FooterCover from "@/components/footerCover";
 import Footer from "@/components/footerSection";
 
