@@ -13,7 +13,7 @@ const BlogSection = () => {
     const fetchBlogs = async () => {
       try {
         const response = await fetch(
-          `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${process.env.NEXT_PUBLIC_NEWS_API_KEY}`
+          `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=4eb1eaf0ea9047439c093bf47c42d4c6`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch blog data. Please try again later.");
