@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-const AboutHero = () => {
+const About = () => {
   return (
     <section className="bg-blue-900 py-24">
       <div className="text-center">
@@ -12,4 +12,4 @@ const AboutHero = () => {
   );
 };
 
-export default AboutHero;
+export default About;
