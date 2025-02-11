@@ -60,18 +60,18 @@ const OurLeaders = () => {
         <h2 className="text-4xl font-bold text-gray-900">Our Leaders</h2>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-6 mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
         {displayedTeam.map((leader, index) => (
           <div key={index} className="flex flex-col items-center">
             <img
               src={leader.image}
               alt={leader.name}
-              className="w-[263px] h-[300px] object-cover rounded-lg shadow-lg"
+              className="w-full max-w-[200px] sm:max-w-[220px] lg:max-w-[263px] h-auto sm:h-[260px] lg:h-[300px] object-cover rounded-lg shadow-lg"
             />
-            <h3 className="text-xl font-bold text-red-500 mt-4">
+            <h3 className="text-lg sm:text-xl font-bold text-red-500 mt-3 sm:mt-4">
               {leader.name}
             </h3>
-            <p className="text-gray-800 text-sm">{leader.role}</p>
+            <p className="text-gray-800 text-xs sm:text-sm">{leader.role}</p>
           </div>
         ))}
       </div>

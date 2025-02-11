@@ -100,7 +100,7 @@ const OurExpertise = () => {
               </div>
 
               <div className="mb-8 ">
-                <h3 className="text-lg font-bold text-gray-800 mb-4 mt-16  font-raleway">
+                <h3 className="text-lg font-bold text-gray-800 mb-4 mt-16 font-raleway">
                   {service.title}
                 </h3>
                 <span className="block w-20 h-1 bg-red-500 mt-1 transition-all duration-300 group-hover:w-40"></span>

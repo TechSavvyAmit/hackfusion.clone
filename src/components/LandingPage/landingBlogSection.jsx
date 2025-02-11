@@ -83,7 +83,7 @@ const BlogSection = () => {
                         className="row-span-2 col-span-1 bg-white p-4 rounded-[10px] shadow-lg flex flex-col items-center text-lg font-semibold relative"
                         style={{
                           minWidth: "250px",
-                          height: "475px",
+                          height: "470px",
                           boxShadow: "0px 0px 10px 0px #FF3E5433",
                         }}
                       >
@@ -110,9 +110,10 @@ const BlogSection = () => {
                           </div>
                         </div>
                         <div className="pt-4 text-left w-full">
-                          <h3 className="text-lg font-bold text-red-500">
+                          <h3 className="text-base sm:text-lg md:text-xl font-bold text-red-500 overflow-hidden text-ellipsis max-h-12">
                             {blog.title}
                           </h3>
+
                           <div className="mt-4">
                             <span className="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">
                               {blog.source?.name || "General News"}
@@ -166,9 +167,10 @@ const BlogSection = () => {
                         </div>
 
                         <div className="pl-4 text-left flex-1">
-                          <h3 className="text-lg font-bold text-red-500">
+                          <h3 className="text-base sm:text-lg md:text-xl font-bold text-red-500 line-clamp-2 overflow-hidden text-ellipsis max-h-12">
                             {blog.title}
                           </h3>
+
                           <div className="mt-4">
                             <span className="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">
                               {blog.source?.name || "General News"}
@@ -178,11 +180,6 @@ const BlogSection = () => {
                                 {blog.author
                                   ? `By ${blog.author}`
                                   : "By Unknown"}
-                              </span>
-                              <span>
-                                {new Date(
-                                  blog.publishedAt
-                                ).toLocaleDateString()}
                               </span>
                             </div>
                           </div>
@@ -232,7 +229,7 @@ const BlogSection = () => {
                       </div>
                     </div>
                     <div className=" p-4 text-left">
-                      <h3 className="text-lg font-bold text-red-500">
+                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-red-500 overflow-hidden text-ellipsis max-h-12">
                         {blog.title}
                       </h3>
                       <div className="mt-4">
