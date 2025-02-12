@@ -36,7 +36,7 @@ const Portfolio = () => {
 
   return (
     <section className="py-[100px] bg-gray-100">
-      <div className="max-w-8xl mx-auto container px-4">
+      <div className="max-w-7xl mx-auto container px-4">
         <div className="text-center mb-12">
           <h3 className="text-red-500 font-semibold text-lg mb-2">
             \ Portfolio \

@@ -5,9 +5,9 @@ const WhatWeDo = () => {
   return (
     <section className="py-[100px] bg-gray-100 font-raleway">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
           {/* Left Image Section */}
-          <div className="pr-6 flex items-stretch">
+          <div className="flex items-stretch">
             <img
               src="/whatWeDo.jpg"
               alt="Team collaborating"
@@ -16,7 +16,7 @@ const WhatWeDo = () => {
           </div>
 
           {/* Right Text Section */}
-          <div className="pl-6 flex flex-col justify-between h-full">
+          <div className=" flex flex-col justify-between h-full">
             <div className="text-left">
               <h3 className="text-red-500 font-semibold text-lg mb-2">
                 \ What We Do \

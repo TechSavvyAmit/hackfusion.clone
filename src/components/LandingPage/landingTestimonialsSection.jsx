@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Testimonials = () => {
   const testimonials = [
@@ -41,10 +41,19 @@ const Testimonials = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(() => window.innerWidth);
 
-  const handleDotClick = (index) => {
-    setCurrentIndex(index);
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+      setCurrentIndex(0);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const testimonialsToShow = screenWidth < 600 ? 1 : 3;
 
   return (
     <section className="py-16 bg-white">
@@ -60,18 +69,23 @@ const Testimonials = () => {
         {/* Testimonials Carousel */}
         <div className="flex justify-center gap-6 items-center">
           {testimonials
-            .slice(currentIndex, currentIndex + 3)
+            .slice(currentIndex, currentIndex + testimonialsToShow)
             .map((testimonial, index) => (
               <div
                 key={index}
-                className={`relative bg-gray-100 p-6 rounded-lg shadow-lg transition-all duration-300 ease-in-out ${
-                  index === 1
+                className={`relative bg-gray-100 p-4 rounded-lg shadow-lg transition-all duration-300 ease-in-out ${
+                  index === 1 && screenWidth >= 600
                     ? "scale-110 shadow-xl opacity-100"
                     : "scale-90 opacity-70"
                 }`}
                 style={{
-                  width: "750px",
-                  height: index === 1 ? "260px" : "252px",
+                  width: screenWidth < 600 ? "90%" : "750px",
+                  height:
+                    screenWidth < 600
+                      ? "auto"
+                      : index === 1
+                      ? "260px"
+                      : "252px",
                 }}
               >
                 {/* Quote Icon */}
@@ -92,7 +106,7 @@ const Testimonials = () => {
                 <p className="text-sm text-gray-600">{testimonial.feedback}</p>
 
                 {/* Name and Role Section */}
-                <div className="flex flex-col items-start mt-10">
+                <div className="flex flex-col items-start mt-3 lg:mt-8">
                   <h3 className="text-lg font-bold text-gray-800">
                     {testimonial.name}
                   </h3>
@@ -106,15 +120,17 @@ const Testimonials = () => {
 
         {/* Navigation Dots */}
         <div className="flex justify-center mt-8">
-          {testimonials.slice(0, testimonials.length - 2).map((_, index) => (
-            <button
-              key={index}
-              className={`w-4 h-4 mx-1 rounded-full ${
-                currentIndex === index ? "bg-red-500" : "bg-gray-300"
-              }`}
-              onClick={() => handleDotClick(index)}
-            ></button>
-          ))}
+          {testimonials
+            .slice(0, testimonials.length - (screenWidth < 600 ? 0 : 2))
+            .map((_, index) => (
+              <button
+                key={index}
+                className={`w-4 h-4 mx-1 rounded-full ${
+                  currentIndex === index ? "bg-red-500" : "bg-gray-300"
+                }`}
+                onClick={() => setCurrentIndex(index)}
+              ></button>
+            ))}
         </div>
       </div>
     </section>

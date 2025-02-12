@@ -1,7 +1,7 @@
 "use client";
 import Head from "next/head";
 import Navbar from "@/components/nav";
-import About from "@/components/Herosection/about";
+import About from "@/components/Herosection/About";
 import AboutUsSection from "@/components/LandingPage/landingAboutusSection";
 import OurLeaders from "@/components/LandingPage/landingOurLeaders";
 import FooterCover from "@/components/footerCover";
